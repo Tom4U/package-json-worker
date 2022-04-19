@@ -1,0 +1,51 @@
+{
+    "name": "package-json-worker",
+    "version": "1.0.0",
+    "description": "Read from and write to package.json file",
+    "main": "./dist/main.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "mocha -r ts-node/register src/**/*.spec.ts",
+        "test:watch": "mocha -r ts-node/register --watch --watch-files src/**/*.ts src/**/*.spec.ts",
+        "coverage": "nyc npm test",
+        "lint": "eslint \"**/*.ts\"",
+        "bump": "standard-version"
+    },
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tom4u/package-json-worker.git"
+    },
+    "keywords": [
+        "tom4u",
+        "helper",
+        "package.json"
+    ],
+    "author": "Thomas Ohms",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tom4u/package-json-worker/issues"
+    },
+    "homepage": "https://github.com/tom4u/package-json-worker#readme",
+    "devDependencies": {
+        "@tsconfig/node16": "^1.0.2",
+        "@types/chai": "^4.3.1",
+        "@types/mocha": "^9.1.0",
+        "@types/node": "^17.0.24",
+        "@types/sinon": "^10.0.11",
+        "@typescript-eslint/eslint-plugin": "^5.19.0",
+        "@typescript-eslint/parser": "^5.19.0",
+        "chai": "^4.3.6",
+        "eslint": "^8.13.0",
+        "mocha": "^9.2.2",
+        "nyc": "^15.1.0",
+        "sinon": "^13.0.2",
+        "standard-version": "^9.3.2",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.6.3"
+    }
+}
