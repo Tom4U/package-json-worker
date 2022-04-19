@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Read from and write to package.json file",
     "main": "./dist/main.js",
+    "private": false,
     "scripts": {
         "build": "tsc",
         "test": "mocha -r ts-node/register src/**/*.spec.ts",
