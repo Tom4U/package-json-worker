@@ -1,5 +1,5 @@
 {
-    "name": "package-json-worker",
+    "name": "@tom4u/package-json-worker",
     "version": "1.0.0",
     "description": "Read from and write to package.json file",
     "main": "./dist/main.js",
