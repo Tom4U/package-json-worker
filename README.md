@@ -1,5 +1,9 @@
 # Helpers for package.json
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Tom4U_package-json-worker&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Tom4U_package-json-worker)
+
+---
+
 ## Description
 This package provides a helper class with static methods used for working with package.json file.
 
