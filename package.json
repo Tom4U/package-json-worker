@@ -36,6 +36,7 @@
     },
     "homepage": "https://github.com/tom4u/package-json-worker#readme",
     "devDependencies": {
+        "@tom4u/npm-project-root": "^1.1.2",
         "@tsconfig/node16": "^1.0.2",
         "@types/chai": "^4.3.1",
         "@types/mocha": "^9.1.0",

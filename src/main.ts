@@ -1,7 +1,7 @@
 import { PackageJson } from './package-json';
 import { resolve as resolvePath } from 'path';
-import { exec } from 'child_process';
 import { writeFileSync } from 'fs';
+import { getProjectRoot } from '@tom4u/npm-project-root';
 
 /**
  * Modify project's package.json on a type-safe way.
@@ -35,15 +35,9 @@ export class PackageJsonWorker {
      */
     static async getPackageJsonPath(): Promise<string> {
         const promise = new Promise<string>((resolve, reject) => {
-            exec('npm root --project', async (err, stdout, stderr) => {
-                if (err) reject(err.message);
-                else if (stderr) reject(err);
-                else {
-                    const path = resolvePath(stdout, '..', 'package.json');
-
-                    resolve(path);
-                }
-            });
+            getProjectRoot()
+                .then((root) => resolve(resolvePath(root, 'package.json')))
+                .catch((reason) => reject(reason));
         });
 
         return promise;
